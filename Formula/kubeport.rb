@@ -5,21 +5,21 @@
 class Kubeport < Formula
   desc "Kubernetes port-forward supervisor with health checks and auto-restart"
   homepage "https://github.com/rbaliyan/kubeport"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.0/kubeport_0.5.0_darwin_amd64.tar.gz"
-      sha256 "5a44cd9d0e928907e2b8931c8518dc227c980c26149580e259ef8307b028bb55"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.1/kubeport_0.5.1_darwin_amd64.tar.gz"
+      sha256 "6cdec180e17e8e09cc84ede05f063792730d4372c39918613ec69d9733c3c852"
 
       def install
         bin.install "kubeport"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.0/kubeport_0.5.0_darwin_arm64.tar.gz"
-      sha256 "b644c0cfded41874e40bcaa6983656a5d505b1151b677d745e0dd417a185aeec"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.1/kubeport_0.5.1_darwin_arm64.tar.gz"
+      sha256 "a3e899cfc4eaa85ed54bbb26f6f843f4e0e2b26bda1bbe0bf9cb00eea7659875"
 
       def install
         bin.install "kubeport"
@@ -29,15 +29,15 @@ class Kubeport < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.0/kubeport_0.5.0_linux_amd64.tar.gz"
-      sha256 "11eae32bc7eb482fa0d4ce6313b4cfeba002b55f2e92979e3c5019960cd55e99"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.1/kubeport_0.5.1_linux_amd64.tar.gz"
+      sha256 "72aaf08ba714761a0c8701d80e2aec4c980c2ab420aeb420decd69f319ad6624"
       def install
         bin.install "kubeport"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.0/kubeport_0.5.0_linux_arm64.tar.gz"
-      sha256 "4ea51fb6c34379768bae31396c5392d5107c2ee74a34f7264c96e6899ec50af6"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.5.1/kubeport_0.5.1_linux_arm64.tar.gz"
+      sha256 "6e6d676bb5866fee866edb8f35455d7a81314896e538089c9a432c76863a8220"
       def install
         bin.install "kubeport"
       end
