@@ -5,21 +5,21 @@
 class Kubeport < Formula
   desc "Kubernetes port-forward supervisor with health checks and auto-restart"
   homepage "https://github.com/rbaliyan/kubeport"
-  version "0.6.2"
+  version "0.6.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.2/kubeport_0.6.2_darwin_amd64.tar.gz"
-      sha256 "b7104a1db6b7c8500643d4836329aea25d6e9ddd3b62dc9478c80a27612bb837"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.3/kubeport_0.6.3_darwin_amd64.tar.gz"
+      sha256 "b973a615a02c3cb864191ddbaabdc8c1ff3d2d23bb6dac7223afdb0d0383f24a"
 
       define_method(:install) do
         bin.install "kubeport"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.2/kubeport_0.6.2_darwin_arm64.tar.gz"
-      sha256 "041d0e4e4a694eeb23295add4e0045692ae7e04a7a0a5dfeb512c074b4b0e655"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.3/kubeport_0.6.3_darwin_arm64.tar.gz"
+      sha256 "b68094affd7fd68531b8474bec216bac0c3fa34db4ac5de132a57eaa40e1d134"
 
       define_method(:install) do
         bin.install "kubeport"
@@ -29,15 +29,15 @@ class Kubeport < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.2/kubeport_0.6.2_linux_amd64.tar.gz"
-      sha256 "0395f8685acbceb69e0b188d28388d4b10bca8a4f2c9b2c64f1bdd836b4c507e"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.3/kubeport_0.6.3_linux_amd64.tar.gz"
+      sha256 "707f70dce6bd09d9c11bd54ea557e7c94610bbe41c8041abc6df37fae2ed4872"
       define_method(:install) do
         bin.install "kubeport"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.2/kubeport_0.6.2_linux_arm64.tar.gz"
-      sha256 "f16a95324e28c302c8f4f0994fa0af269d76116a15490bd79c9809de8ff4817d"
+      url "https://github.com/rbaliyan/kubeport/releases/download/v0.6.3/kubeport_0.6.3_linux_arm64.tar.gz"
+      sha256 "f302890fc996ffae316c80799ad3d95766a2940c2b2b4159ae1e769bfca02d44"
       define_method(:install) do
         bin.install "kubeport"
       end
