@@ -5,21 +5,21 @@
 class Ledger < Formula
   desc "Append-only log daemon with gRPC API and pluggable storage backends"
   homepage "https://github.com/rbaliyan/ledger"
-  version "0.0.11"
+  version "0.0.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.11/ledger_0.0.11_darwin_amd64.tar.gz"
-      sha256 "119217b03ae8d5ae58f4cd0f8f4528a8f569e5ec22e5651733bba2ef3e4cdf1e"
+      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.12/ledger_0.0.12_darwin_amd64.tar.gz"
+      sha256 "ba92436ea91b15dba881bf4d3fc3d36910f87ff4af76e6c5836652bf1551ace2"
 
       define_method(:install) do
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.11/ledger_0.0.11_darwin_arm64.tar.gz"
-      sha256 "a809fdd2e45800c6cae4ea185642687c433da99e8c96dc7c7096515beb32532d"
+      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.12/ledger_0.0.12_darwin_arm64.tar.gz"
+      sha256 "cb7bb55f6201e31f8aba228ce9795bb710af8e759bdce71fb54da2366bfca350"
 
       define_method(:install) do
         bin.install "ledger"
@@ -29,15 +29,15 @@ class Ledger < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.11/ledger_0.0.11_linux_amd64.tar.gz"
-      sha256 "e83cfaf711b1b5e33628d630454eb25c31745620f783e508175ec4154140c2b5"
+      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.12/ledger_0.0.12_linux_amd64.tar.gz"
+      sha256 "d5f96d23fe2601adb0b6c1e0dca9aed7764342e3406f4fae21c38c376a6ec714"
       define_method(:install) do
         bin.install "ledger"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.11/ledger_0.0.11_linux_arm64.tar.gz"
-      sha256 "f93c9aa792fdaa4f9a6b675eab486b76b27b424b70808a9a11d713b6e7a15447"
+      url "https://github.com/rbaliyan/ledger/releases/download/v0.0.12/ledger_0.0.12_linux_arm64.tar.gz"
+      sha256 "72f6ae2807e21d207072778873af25461d8ccaeb35316ecd6f9314881e935695"
       define_method(:install) do
         bin.install "ledger"
       end
